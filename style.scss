@@ -1,0 +1,145 @@
+/* Scss Document */
+
+/* Styles go here */
+
+body {
+  background: #f2f2f2;
+  font-family: Arial, sans-serif;
+}
+
+.fluid-container {
+	padding: 64px;
+	padding-left: 140px;
+}
+
+.barChartStyle {
+	background: #fff !important;
+	box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+	padding: 12px;
+	border-radius: 3px;
+}
+
+.pwc-top-navbar {
+  background: #fff;
+  height: 64px;
+  position: sticky;
+  padding-left: 90px;
+  width: calc(100%-88px);
+}
+
+.pwc-logo {
+  background: #a32020;
+  width: 88px;
+  height: 64px;
+  position: fixed;
+  top:0;
+  left: 0;
+  text-align: center;
+  padding: 0;
+}
+
+
+.sidenav {
+    height: 100%;
+    width: 88px;
+    position: fixed;
+    z-index: 1;
+    top: 16px;
+    left: 0;
+    background-color: #404041;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    
+    span {
+      display: inline-block;
+      font: 12px Arial;
+      position: relative;
+      left: 55px;
+    }
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    height: 64px;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.mx-auto {
+  padding-left: 88px;
+}
+
+.rpm-header {
+  text-align: center;
+  margin: 75px;
+}
+
+.rpm-search {
+  margin: 25px 0;
+  
+  .input-group-addon {
+    border-right: 0;
+    background: #fff;
+    border-color: #e7e7e8;
+  }
+  
+  .form-control {
+    border-left: 0;
+    border-color: #e7e7e8;
+  }
+ .input-group:hover {
+    box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+  }
+}
+
+.client-title {
+  padding: 6px 12px;
+  font-size: 10pt;
+}
+.client-card {
+  font-size: 12pt;
+  margin-bottom: 6px;
+  background: #fff;
+  border: 1px solid #e7e7e8;
+  border-radius: 3px;
+  
+  .card-block {
+    padding: 12px;
+  }
+  
+  :hover {
+    color: #dc6900;
+  }
+}
+
+.client-card:hover {
+    box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+  }
+  
+.more-dropdown {
+  position: absolute;
+  right: 24px;
+}
+
+.client-name {
+  font-weight: 600;
+}
