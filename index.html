@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+   <head>
+       <meta charset="utf-8">
+       
+         <link data-require="bootstrap@*" data-semver="4.0.5" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
+  <link data-require="font-awesome@*" data-semver="4.7.0" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <script data-require="bootstrap@*" data-semver="4.0.5" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script data-require="jquery@*" data-semver="3.1.1" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script data-require="tether@1.4.0" data-semver="1.4.0" src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="style.scss" />
+  
+  
+   </head>
+   <body style="height: 100%; margin: 0">
+      
+      <nav class="navbar sticky-top navbar-toggleable-md navbar-light pwc-top-navbar">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a href="javascript:void(0)" class="pwc-logo closebtn" onclick="openNav()">
+      <img src="PwCLogo.svg" />
+    </a>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">COFFEE BEANS INC & SUBS</a>
+        </li>
+      </ul>
+  
+      <!--PwC Icons-->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa fa-home" aria-hidden="true"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa fa-comments" aria-hidden="true"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa fa-globe" aria-hidden="true"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa fa-id-badge" aria-hidden="true"></i></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          anh.nguyen@pwc.com
+        </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+      </ul>
+      
+    </div>
+  </nav>
+     
+       <div id="mySidenav" class="sidenav" onclick="closeNav()">
+    <a href="#">
+      <i class="fa fa-home" aria-hidden="true"></i>
+    </a>
+    <a href="#">
+      <i class="fa fa-cog" aria-hidden="true"></i>
+    </a>
+
+  </div>
+      
+      <div class="fluid-container">
+      	<div class="row">
+      		<div class="col-md-4">
+      		<div class="barChartStyle">
+      		<div id="mapChart" style="height:400px;"></div>
+      			<div id="barChart" style="height: 400px;">
+      				
+      			</div>
+				</div>
+      		</div>
+      		
+      		<div class="col-md-4">
+      		<div class="barChartStyle">
+      		<div id="container" style="height:400px;"></div>      				
+      		<div id="nestPie" style="height:400px;"></div>      				
+				</div></div>
+      			
+      		<div class="col-md-4">
+      		<div class="barChartStyle">
+      		<div id="nestPie2" style="height:800px;"></div>      				
+				</div></div>
+      		</div>
+      		
+      		<div class="row">
+      		<div class="col-12">
+      		<div class="barChartStyle mt-4">
+      			Test
+      		</div>
+				</div>
+		  </div>
+      	</div>
+      </div>
+
+       <script type="text/javascript" src="echarts-all-3.js"></script>
+       <script type="text/javascript" src="ecStat.min.js"></script>
+       <script type="text/javascript" src="dataTool.min.js"></script>
+       <script type="text/javascript" src="china.js"></script>
+       <script type="text/javascript" src="world.js"></script>
+       <script type="text/javascript" src="map.api.js"></script>
+       <script type="text/javascript" src="bmap.min.js"></script>
+
+       <script src="brushBar.js"></script>
+
+       
+       <script src="nestPie.js"></script>
+       <script src="nestPie2.js"></script>
+
+       <script src="barChart.js"></script>
+       <script src="mapChart.js"></script>
+
+
+       
+   </body>
+</html>
