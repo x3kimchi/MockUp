@@ -1,23 +1,8 @@
-<!DOCTYPE html>
-<html style="height: 100%">
-   <head>
-       <meta charset="utf-8">
-   </head>
-   <body style="height: 100%; margin: 0">
-       <div id="container" style="height: 100%"></div>
-       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
-       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
-       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
-       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
-       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
-       <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
-       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
-       <script type="text/javascript">
 var brush = document.getElementById("container");
 var myChart = echarts.init(brush);
 var app = {};
 option = null;
-app.title = 'Bar Chart';
+app.title = 'Foreign Form(s)';
 
 var xAxisData = [];
 var data1 = [];
@@ -27,10 +12,8 @@ var data4 = [];
 
 for (var i = 0; i < 10; i++) {
     xAxisData.push('Class' + i);
-    data1.push((Math.random() * 2).toFixed(2));
-    data2.push(-Math.random().toFixed(2));
-    data3.push((Math.random() * 5).toFixed(2));
-    data4.push((Math.random() + 0.3).toFixed(2));
+    data1.push(-Math.random().toFixed(2));
+    data2.push((Math.random() * 2).toFixed(2));
 }
 
 var itemStyle = {
@@ -46,10 +29,9 @@ var itemStyle = {
 };
 
 option = {
-    backgroundColor: '#eee',
+    backgroundColor: '#fff',
     legend: {
-        data: ['bar', 'bar2', 'bar3', 'bar4'],
-        align: 'left',
+        align: 'right',
         left: 10
     },
     brush: {
@@ -66,15 +48,15 @@ option = {
     },
     tooltip: {},
     xAxis: {
-        data: xAxisData,
+        data: ['Australia','China','Germany','India','Mexico','Poland','United Kingdom'],
         name: 'X Axis',
         silent: false,
         axisLine: {onZero: true},
         splitLine: {show: false},
-        splitArea: {show: false}
+        splitArea: {show: true}
     },
     yAxis: {
-        inverse: true,
+        inverse: false,
         splitArea: {show: false}
     },
     grid: {
@@ -84,7 +66,7 @@ option = {
         type: 'continuous',
         dimension: 1,
         text: ['High', 'Low'],
-        inverse: true,
+        inverse: false,
         itemHeight: 200,
         calculable: true,
         min: -2,
@@ -92,14 +74,14 @@ option = {
         top: 60,
         left: 10,
         inRange: {
-            colorLightness: [0.4, 0.8]
+            colorLightness: [0.4, 0.4]
         },
         outOfRange: {
             color: '#bbb'
         },
         controller: {
             inRange: {
-                color: '#2f4554'
+                color: ['#A32020','#5b9bd5']
             }
         }
     },
@@ -109,14 +91,16 @@ option = {
             type: 'bar',
             stack: 'one',
             itemStyle: itemStyle,
-            data: data1
+            data: data1,
+			color: ['#A32020']
         },
         {
             name: 'bar2',
             type: 'bar',
             stack: 'one',
             itemStyle: itemStyle,
-            data: data2
+            data: data2,
+			color: ['#5b9bd5']
         },
         {
             name: 'bar3',
@@ -155,14 +139,11 @@ function renderBrushed(params) {
             width: 100,
             textStyle: {
                 fontSize: 12,
-                color: '#fff'
+                color: '#000'
             }
         }
     });
 };
 if (option && typeof option === "object") {
     myChart.setOption(option, true);
-}
-       </script>
-   </body>
-</html>
+}// JavaScript Document

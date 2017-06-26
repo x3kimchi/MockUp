@@ -1,23 +1,8 @@
-<!DOCTYPE html>
-<html style="height: 100%">
-   <head>
-       <meta charset="utf-8">
-   </head>
-   <body style="height: 100%; margin: 0">
-       <div id="container" style="height: 100%"></div>
-       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
-       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
-       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
-       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
-       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
-       <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
-       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
-       <script type="text/javascript">
-var brush = document.getElementById("container");
-var myChart = echarts.init(brush);
+var dom = document.getElementById("brushBar");
+var brushChart = echarts.init(dom);
 var app = {};
 option = null;
-app.title = 'Bar Chart';
+app.title = 'Foreign Forms';
 
 var xAxisData = [];
 var data1 = [];
@@ -135,7 +120,7 @@ option = {
     ]
 };
 
-myChart.on('brushSelected', renderBrushed);
+brushChart.on('brushSelected', renderBrushed);
 
 function renderBrushed(params) {
     var brushed = [];
@@ -148,7 +133,7 @@ function renderBrushed(params) {
 
     myChart.setOption({
         title: {
-            backgroundColor: '#fff',
+            backgroundColor: '#333',
             text: 'SELECTED DATA INDICES: \n' + brushed.join('\n'),
             bottom: 0,
             right: 0,
@@ -163,6 +148,3 @@ function renderBrushed(params) {
 if (option && typeof option === "object") {
     myChart.setOption(option, true);
 }
-       </script>
-   </body>
-</html>
