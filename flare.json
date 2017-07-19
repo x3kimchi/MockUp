@@ -1,0 +1,63 @@
+{
+ "name": "Taxable Income or Loss",
+ "children": [
+  {
+   "name": "Income",
+   "children": [
+    {
+     "name": "Gross Profit",
+     "children": [
+      {"name": "GrossReceipts or Sale", "size": 43541580511},
+      {"name": "Return and Allowances", "size": 1045165424},
+      {"name": "Cost of Goods Sold", "size": 9136353908}
+     ]
+    },
+    {
+    "name": "Other Income",
+        "children": [
+        {"name": "Dividents", "size": 642167905},
+        {"name": "Interest", "size": 234142382},
+        {"name": "Gross rents", "size": 74020630},
+        {"name": "Gross Royalties", "size": 2626754610},
+        {"name": "Capital Gain or (loss) from 4797", "size": 21202126},
+        {"name": "Other Income", "size": 7446628680}
+        ]
+    }
+   ]
+  },
+    {
+    "name": "Deduction",
+        "children": [
+            {"name": "Compensation of Officers", "size": 39184695},
+            {"name": "Salaries and Wages", "size": 11876710195},
+            {"name": "Repairs and Maintenance", "size": 298907896},
+            {"name": "Bad Debts", "size": 59213015},
+            {"name": "Rents", "size": 421788364},
+            {"name": "Taxes and Licenses", "size": 1106936151},
+            {"name": "Interest", "size": 529581822},
+            {"name": "Charitable Contributions", "size": 127103479},
+            {"name": "Depreciation (Page 1)", "size": 2767572841},
+            {"name": "Depletion", "size": 25750},
+            {"name": "Advertising", "size": 6006},
+            {"name": "Pension, Profit-Sharing. etc.", "size": 273949691},
+            {"name": "Employee Benefit Programs", "size": 689578022},
+            {"name": "DPAD", "size": 79522631},
+            {"name": "Other Deductions", "size": 16540758096}
+        ]
+    }
+ ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
